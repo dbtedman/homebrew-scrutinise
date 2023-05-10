@@ -5,43 +5,43 @@
 class Scrutinise < Formula
   desc "Tool to scrutinise website development security."
   homepage "https://github.com/dbtedman/scrutinise"
-  version "0.0.5"
+  version "0.0.8"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dbtedman/scrutinise/releases/download/0.0.5/scrutinise_0.0.5_darwin_amd64"
-      sha256 "bdbb595124266a6a670852c1b25175d52f48cfc281cd3c8cc5e942fa8afada43"
+      url "https://github.com/dbtedman/scrutinise/releases/download/0.0.8/scrutinise_0.0.8_darwin_amd64"
+      sha256 "afa34dbd29fac9fbf04ae1c82850f83369a65ddebfbc33f6d84bb0715e970ab8"
 
       def install
-        bin.install "scrutinise_0.0.5_darwin_amd64" => "scrutinise"
+        bin.install "scrutinise_0.0.8_darwin_amd64" => "scrutinise"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dbtedman/scrutinise/releases/download/0.0.5/scrutinise_0.0.5_darwin_arm64"
-      sha256 "cfdc131fa3cd071fb17230a14d6a45672c18bda9124ed4dba5d7ddfe2c81e93f"
+      url "https://github.com/dbtedman/scrutinise/releases/download/0.0.8/scrutinise_0.0.8_darwin_arm64"
+      sha256 "0f15f7641304330b7e306277863983cc4052b36a6051b30e244cf13649c8bbf3"
 
       def install
-        bin.install "scrutinise_0.0.5_darwin_arm64" => "scrutinise"
+        bin.install "scrutinise_0.0.8_darwin_arm64" => "scrutinise"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dbtedman/scrutinise/releases/download/0.0.5/scrutinise_0.0.5_linux_arm64"
-      sha256 "4e93f166361bca4e04d7e6bc4f8f3f0941bc66f5e0fce52474886b2881654875"
+      url "https://github.com/dbtedman/scrutinise/releases/download/0.0.8/scrutinise_0.0.8_linux_arm64"
+      sha256 "33a50d0529c1dc852c96d5b250c9c9c5754bb1c519f17d02ec6e04e3290d9527"
 
       def install
-        bin.install "scrutinise_0.0.5_linux_arm64" => "scrutinise"
+        bin.install "scrutinise_0.0.8_linux_arm64" => "scrutinise"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dbtedman/scrutinise/releases/download/0.0.5/scrutinise_0.0.5_linux_amd64"
-      sha256 "f3531ea3071683d4464ed7d2bd816a24ab663ef2e6dc27bcee13fd64f5918f5f"
+      url "https://github.com/dbtedman/scrutinise/releases/download/0.0.8/scrutinise_0.0.8_linux_amd64"
+      sha256 "7d278ed8a84416835cd5b82c5fe2f72cf206e20644bb7e62bf2c0d765293a4cc"
 
       def install
-        bin.install "scrutinise_0.0.5_linux_amd64" => "scrutinise"
+        bin.install "scrutinise_0.0.8_linux_amd64" => "scrutinise"
       end
     end
   end
