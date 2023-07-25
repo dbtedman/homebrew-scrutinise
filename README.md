@@ -12,6 +12,15 @@ brew tap dbtedman/tap
 
 ## Available Formula
 
+### [Conveyance](./Formula/conveyance.rb)
+
+Automatically published
+by [Conveyance Release Workflow](https://github.com/dbtedman/conveyance/blob/main/.github/workflows/release.yml).
+
+```shell
+brew install scrutinise
+```
+
 ### [Scrutinise](./Formula/scrutinise.rb)
 
 Automatically published
