@@ -18,7 +18,7 @@ Automatically published
 by [Conveyance Release Workflow](https://github.com/dbtedman/conveyance/blob/main/.github/workflows/release.yml).
 
 ```shell
-brew install scrutinise
+brew install conveyance
 ```
 
 ### [Scrutinise](./Formula/scrutinise.rb)
