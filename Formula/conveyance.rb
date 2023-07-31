@@ -5,43 +5,43 @@
 class Conveyance < Formula
   desc "Provide security by proxying requests to legacy applications."
   homepage "https://github.com/dbtedman/conveyance"
-  version "0.1.1"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/dbtedman/conveyance/releases/download/0.1.1/conveyance_0.1.1_darwin_amd64"
-      sha256 "133118cee2445b9ee1c4d6136adc6961abc1c80b51c146522d657372e0315559"
+    if Hardware::CPU.arm?
+      url "https://github.com/dbtedman/conveyance/releases/download/0.2.1/conveyance_0.2.1_darwin_arm64"
+      sha256 "c2d3782d3cdbfea97fec2ae28e68860a1b7bb046c03b529b9ed386f208c9c5eb"
 
       def install
-        bin.install "conveyance_0.1.1_darwin_amd64" => "conveyance"
+        bin.install "conveyance_0.2.1_darwin_arm64" => "conveyance"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/dbtedman/conveyance/releases/download/0.1.1/conveyance_0.1.1_darwin_arm64"
-      sha256 "e9208f580a1a241a5759d7dd0f6a33f55abdd54b53e9f191b6fe87ebf3963649"
+    if Hardware::CPU.intel?
+      url "https://github.com/dbtedman/conveyance/releases/download/0.2.1/conveyance_0.2.1_darwin_amd64"
+      sha256 "c6637b4fabe8d3338702f494bc46a1c2ac28335ef9628e541ae83b4c718b5b5b"
 
       def install
-        bin.install "conveyance_0.1.1_darwin_arm64" => "conveyance"
+        bin.install "conveyance_0.2.1_darwin_amd64" => "conveyance"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/dbtedman/conveyance/releases/download/0.1.1/conveyance_0.1.1_linux_amd64"
-      sha256 "33dde59b88d63c6519833075cdba3d22d405a02daf2db71a659390c7be9a84fc"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/dbtedman/conveyance/releases/download/0.2.1/conveyance_0.2.1_linux_arm64"
+      sha256 "0ca7f1de00ca72755b9bdd8216067b43ad3efbc579c8b2dd928d745017269fd7"
 
       def install
-        bin.install "conveyance_0.1.1_linux_amd64" => "conveyance"
+        bin.install "conveyance_0.2.1_linux_arm64" => "conveyance"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dbtedman/conveyance/releases/download/0.1.1/conveyance_0.1.1_linux_arm64"
-      sha256 "14e9c66f63ca6a0511a12768e4fb313ae1e5bc7a192b552b40397bdc937218f8"
+    if Hardware::CPU.intel?
+      url "https://github.com/dbtedman/conveyance/releases/download/0.2.1/conveyance_0.2.1_linux_amd64"
+      sha256 "6ac852178e900f83de090b5ade30e5afcf8772596450d3b977611bb86516ae55"
 
       def install
-        bin.install "conveyance_0.1.1_linux_arm64" => "conveyance"
+        bin.install "conveyance_0.2.1_linux_amd64" => "conveyance"
       end
     end
   end
