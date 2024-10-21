@@ -5,48 +5,24 @@
 class Accretion < Formula
   desc "Navigate internet resources from the command line."
   homepage "https://github.com/dbtedman/accretion"
-  version "0.0.3"
+  version "0.0.4"
   license "MIT"
+  depends_on :macos
 
-  on_macos do
-    on_intel do
-      url "https://github.com/dbtedman/accretion/releases/download/0.0.3/accretion_0.0.3_darwin_amd64"
-      sha256 "89333892ea8ecc2968af3d6e40a27e0944a9592233c0fcf21cb027d5176c6ab0"
+  on_intel do
+    url "https://github.com/dbtedman/accretion/releases/download/0.0.4/accretion_0.0.4_darwin_amd64"
+    sha256 "826f38a7232c543d5788214e887e083b5b5736a3488887a890efe4b444edceb3"
 
-      def install
-        bin.install "accretion_0.0.3_darwin_amd64" => "accretion"
-      end
-    end
-    on_arm do
-      url "https://github.com/dbtedman/accretion/releases/download/0.0.3/accretion_0.0.3_darwin_arm64"
-      sha256 "a5057347da9a51067715a8e5e8ce87918bbabeafc8da3b833267d245f7d11c21"
-
-      def install
-        bin.install "accretion_0.0.3_darwin_arm64" => "accretion"
-      end
+    def install
+      bin.install "accretion_0.0.4_darwin_amd64" => "accretion"
     end
   end
+  on_arm do
+    url "https://github.com/dbtedman/accretion/releases/download/0.0.4/accretion_0.0.4_darwin_arm64"
+    sha256 "bb12e8670123e972ddb30077b914425604d049fc7481f82a06598b549d1c1de1"
 
-  on_linux do
-    on_intel do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/dbtedman/accretion/releases/download/0.0.3/accretion_0.0.3_linux_amd64"
-        sha256 "b1d9fdd94772ec93f6dbdc1a17d43c36c934051b51383489415157a0978afa48"
-
-        def install
-          bin.install "accretion_0.0.3_linux_amd64" => "accretion"
-        end
-      end
-    end
-    on_arm do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/dbtedman/accretion/releases/download/0.0.3/accretion_0.0.3_linux_arm64"
-        sha256 "d524671cd455950110dda62e279cce316f30b8ae59b680763c0cb305768715bb"
-
-        def install
-          bin.install "accretion_0.0.3_linux_arm64" => "accretion"
-        end
-      end
+    def install
+      bin.install "accretion_0.0.4_darwin_arm64" => "accretion"
     end
   end
 end
